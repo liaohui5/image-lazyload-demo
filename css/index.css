@@ -1,0 +1,42 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+.page-header {
+  text-align: center;
+  margin: 0;
+  padding: 20px 0;
+}
+.img-list,
+.img-item {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.img-list {
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.img-list .img-item {
+  width: 490px;
+  height: 300px;
+  margin-bottom: 10px;
+}
+
+.img-list .img-item img {
+  width: 100%;
+  display: block;
+}
+
+.img-list .img-title {
+  line-height: 50px;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  color: #888;
+}
