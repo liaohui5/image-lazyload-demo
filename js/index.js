@@ -81,10 +81,22 @@
     };
   }
 
-  var init = function () {
-    renderList();
+  // 绑定事件
+  var bindEvents = function () {
     var images = document.getElementsByClassName("lazyload-img-item") || [];
     window.onload = window.onscroll = throttle(lazyload(images), 500);
+  };
+
+  var init = function () {
+    renderList();
+    bindEvents();
+
+    // 如果滚动条在最底部,应该先回到顶部,然后在让他加载图片,否则就一次性全部加载完了
+    window.onload = function () {
+      setTimeout(function () {
+        window.scrollTo(0, 0);
+      }, 100);
+    };
   };
 
   init();

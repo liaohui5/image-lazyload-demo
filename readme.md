@@ -9,7 +9,7 @@
 ```sh
 npm i -g http-server
 
-cd lazyload
+cd image-lazyload
 
 # 默认代码里写的是 8899
 http-server -p8899
